@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Navigation } from 'swiper'
-import AppLayout from '../components/layouts/AppLayout'
-import { breakpoints_four, breakpoints_three } from '../utils/consts'
+import AppLayout from '../../components/layouts/AppLayout'
+import { breakpoints_four, breakpoints_three } from '../../utils/consts'
 
-export default function Plants() {
+export default function SinglePlant() {
 
   const plant = {
     "description": "Rocket is an easy-to-grow crop that adds a lovely peppery flavour to salads. The younger leaves are milder, more tender and delicately flavoured. Older leaves can also be lightly cooked as a spinach substitute, added to sauces, stir-fried or saut\u00e9ed in olive oil. The flowers are edible too. Rocket is rich in potassium and vitamin C and flourishes in a warm, sunny position.",
@@ -47,6 +47,7 @@ export default function Plants() {
       'img': '/images/wateringcan.jpeg'
     },
   ]
+  
   return (
     <AppLayout>
       <div className='container'>
@@ -92,7 +93,7 @@ export default function Plants() {
                           return (
                             <SwiperSlide key={i}>
                               <div class="card_in_slide" style={{
-                                background:`url(${s.img})`,
+                                background: `url(${s.img})`,
                                 height: '200px',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundSize: "cover",
@@ -113,29 +114,29 @@ export default function Plants() {
         <div className='py-5'>
           <h4>Related Plants</h4>
           <hr />
-                      <Swiper
-                        modules={[Navigation, A11y]}
-                        navigation breakpoints={breakpoints_four}
-                        loop={true} centeredSlides={true}
-                        autoplay={{
-                          delay: 2000,
-                          disableOnInteraction: false,
-                        }} >
-                        {sampletobuy.map((s, i) => {
-                          return (
-                            <SwiperSlide key={i}>
-                              <div class="card_in_slide" style={{
-                                background:`url(${s.img})`,
-                                height: '200px',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundSize: "cover",
-                                transition: '1s'
-                              }}>
-                              </div>
-                            </SwiperSlide>
-                          )
-                        })}
-                      </Swiper>
+          <Swiper
+            modules={[Navigation, A11y]}
+            navigation breakpoints={breakpoints_four}
+            loop={true} centeredSlides={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }} >
+            {sampletobuy.map((s, i) => {
+              return (
+                <SwiperSlide key={i}>
+                  <div class="card_in_slide" style={{
+                    background: `url(${s.img})`,
+                    height: '200px',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: "cover",
+                    transition: '1s'
+                  }}>
+                  </div>
+                </SwiperSlide>
+              )
+            })}
+          </Swiper>
         </div>
       </div>
     </AppLayout>
