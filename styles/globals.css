@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: var(--background-color);
 }
 
 :root {
@@ -66,6 +67,10 @@ a {
   padding: 1.5em;
 }
 
+.disscount-advice-content p {
+  white-space: pre-line;
+}
+
 a:hover {
   text-decoration: none;
   color: black;
@@ -111,4 +116,25 @@ a:hover {
 
 .plants-container {
   cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .plants-container {
+    flex-wrap: wrap;
+  }
+
+  .plant-item {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  .disscount-advice-content {
+    display: none;
+  }
+
+  .disscount-advice {
+    min-width: 0;
+    width: 100%;
+  }
 }

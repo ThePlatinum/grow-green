@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import HeaderDisscount from '../components/header-disscount'
 import AppLayout from '../components/layouts/AppLayout'
-import PlantList from '../components/top-picks'
+import PlantList from '../components/plant-list'
 import { Plants } from '../services/plants.service';
 
 
@@ -42,7 +42,7 @@ export default function Home() {
         background_img="//img.crocdn.co.uk/images/affiliates/image-archive/shrubs/pl0000000003_1087x380.jpg"
         href="shop/route"
       />
-      <PlantList title="Popular categories" plants={plants?.topPick} />
+      <PlantList title="Popular categories" plants={plants?.topCategories} />
 
 
     </AppLayout>
