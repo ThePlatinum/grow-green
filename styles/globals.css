@@ -479,5 +479,19 @@ section {
 
 .search-bar :is(input, button) {
   height: 3em;
-  outline: none;
+}
+
+.search-bar :is(input, button):focus {
+  box-shadow: none;
+}
+
+.search-bar button {
+  background-color: var(--background-color);
+  outline: 1px solid var(--dark-green);
+}
+
+.search-bar button:hover {
+  color: var(--background-color);
+  background-color: var(--dark-green);
+  outline: 1px solid var(--dark-green);
 }
