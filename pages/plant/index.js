@@ -50,10 +50,10 @@ export default function Plants() {
       <div className='container'>
         <PlantSearch />
         <div className="row">
-          {[...Array(20).keys()].map(i=>{
+          {[...Array(20).keys()].map(j=>{
             return(
-              <div className='col-md-3 pb-4' key={i}>
-                <PlantCard plant={plant} />
+              <div className='col-md-3 pb-4' key={j}>
+                <PlantCard plant={plant} key={j}/>
               </div>
             )
           })}
@@ -72,12 +72,8 @@ export default function Plants() {
             {sampletobuy.map((s, i) => {
               return (
                 <SwiperSlide key={i}>
-                  <div class="card_in_slide" style={{
-                    background: `url(${s.img})`,
-                    height: '200px',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundSize: "cover",
-                    transition: '1s'
+                  <div className="card_in_slide" style={{
+                    'background' : `url(${s?.img})`
                   }}>
                   </div>
                 </SwiperSlide>

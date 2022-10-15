@@ -4,13 +4,13 @@ export default function Footer() {
     <div className="bg-green mt-5">
       <div className="container d-flex flex-column align-items-center text-center text-white py-5">
 
-        <div class="w-md-50">
+        <div className="w-md-50">
           <h4>Subscribe</h4>
           <p>Get connected to our insights</p>
-          <div class="input-group">
-               <input type="text" class="form-control" name="email" placeholder="Enter your email" />
-               <span class="input-group-btn">
-                    <button class="btn btn-outline-light px-4" type="button">Subscribe</button>
+          <div className="input-group">
+               <input type="text" className="form-control" name="email" placeholder="Enter your email" />
+               <span className="input-group-btn">
+                    <button className="btn btn-outline-light px-4" type="button">Subscribe</button>
                </span>
             </div>
         </div>

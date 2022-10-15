@@ -20,41 +20,41 @@ export default function Shop() {
               <h4>Summary</h4>
               < hr />
 
-              <div class=" mb-5 rounded-0">
-                <div class="">
-                  <div class="spaced-between">
+              <div className=" mb-5 rounded-0">
+                <div className="">
+                  <div className="spaced-between">
                     <dt>Total Items:</dt>
-                    <dd class="text-right">2</dd>
+                    <dd className="text-right">2</dd>
                   </div>
-                  <div class="spaced-between">
+                  <div className="spaced-between">
                     <dt>Total price:</dt>
-                    <dd class="text-right">USD 568</dd>
+                    <dd className="text-right">USD 568</dd>
                   </div>
-                  <div class="spaced-between">
+                  <div className="spaced-between">
                     <dt>Discount:</dt>
-                    <dd class="text-right">USD 000</dd>
+                    <dd className="text-right">USD 000</dd>
                   </div>
-                  <div class="spaced-between">
+                  <div className="spaced-between">
                     <dt>Total:</dt>
-                    <dd class="text-right h5"><strong>USD 1,650</strong></dd>
+                    <dd className="text-right h5"><strong>USD 1,650</strong></dd>
                   </div>
                 </div>
               </div>
 
               <form>
-                <div class="form-group">
+                <div className="form-group">
                   <label>Have coupon?</label>
-                  <div class="input-group">
-                    <input type="text" class="form-control rounded-0" name="" placeholder="Coupon code" />
-                    <span class="input-group-append">
-                      <button class="btn btn-dark rounded-0">Apply</button>
+                  <div className="input-group">
+                    <input type="text" className="form-control rounded-0" name="" placeholder="Coupon code" />
+                    <span className="input-group-append">
+                      <button className="btn btn-dark rounded-0">Apply</button>
                     </span>
                   </div>
                 </div>
               </form>
 
-              <div class="d-grid gap-2 pt-5">
-                <a href="#" class="btn btn-dark rounded-0"> Make Purchase <i class="fa fa-chevron-right"></i> </a>
+              <div className="d-grid gap-2 pt-5">
+                <a href="#" className="btn btn-dark rounded-0"> Make Purchase <i className="fa fa-chevron-right"></i> </a>
               </div>
             </div>
 
@@ -80,13 +80,13 @@ export default function Shop() {
                   </div>
                 </div>
                 <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  <input type='number' value='1' class="form-control" />
+                  <input type='number' value='1' className="form-control" />
                 </div>
                 <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
                   $98.00
                 </div>
                 <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  <a href="#" className="btn btn-outline-danger" ><i class="bi bi-trash"></i></a>
+                  <a href="#" className="btn btn-outline-danger" ><i className="bi bi-trash"></i></a>
                 </div>
               </div>
               <div className="row bg-white m-0 p-2 ps-0">
@@ -100,13 +100,13 @@ export default function Shop() {
                   </div>
                 </div>
                 <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  <input type='number' value='1' class="form-control" />
+                  <input type='number' value='1' className="form-control" />
                 </div>
                 <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
                   $98.00
                 </div>
                 <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  <a href="#" className="btn btn-outline-danger" ><i class="bi bi-trash"></i></a>
+                  <a href="#" className="btn btn-outline-danger" ><i className="bi bi-trash"></i></a>
                 </div>
               </div>
               <div className="row bg-light m-0 p-2 ps-0">
@@ -120,13 +120,13 @@ export default function Shop() {
                   </div>
                 </div>
                 <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  <input type='number' value='1' class="form-control" />
+                  <input type='number' value='1' className="form-control" />
                 </div>
                 <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
                   $98.00
                 </div>
                 <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  <a href="#" className="btn btn-outline-danger" ><i class="bi bi-trash"></i></a>
+                  <a href="#" className="btn btn-outline-danger" ><i className="bi bi-trash"></i></a>
                 </div>
               </div>
             </div>

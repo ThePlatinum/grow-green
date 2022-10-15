@@ -64,8 +64,8 @@ export default function SinglePlant() {
         </div>
         <div className='row py-5'>
           <div className='col-md-2'>
-            <nav class="flex-column align-items-stretch pe-4 border-end">
-              <nav class="d-flex flex-md-column gap-2" >
+            <nav className="flex-column align-items-stretch pe-4 border-end">
+              <nav className="d-flex flex-md-column gap-2" >
                 {menus.map(m => { return (<a className=" text-capitalize" key={m} href={'#' + m}>{m}</a>) })}
               </nav>
             </nav>
@@ -92,7 +92,7 @@ export default function SinglePlant() {
                         {sampletobuy.map((s, i) => {
                           return (
                             <SwiperSlide key={i}>
-                              <div class="card_in_slide" style={{
+                              <div className="card_in_slide" style={{
                                 background: `url(${s.img})`,
                                 height: '200px',
                                 backgroundRepeat: 'no-repeat',
@@ -125,7 +125,7 @@ export default function SinglePlant() {
             {sampletobuy.map((s, i) => {
               return (
                 <SwiperSlide key={i}>
-                  <div class="card_in_slide" style={{
+                  <div className="card_in_slide" style={{
                     background: `url(${s.img})`,
                     height: '200px',
                     backgroundRepeat: 'no-repeat',

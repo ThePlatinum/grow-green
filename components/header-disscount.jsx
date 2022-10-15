@@ -2,7 +2,7 @@ const HeaderDisscount = ({ header = false, background_img, title, description, h
   let parsed_title = title.split('\n');
 
   return <div className={`d-flex ${!header ? ' px-3 container' : ''}`}>
-    <div style={{ 'background-image': `url(${background_img})` }} className='header-disscounts'>
+    <div style={{ 'backgroundImage': `url(${background_img})` }} className='header-disscounts'>
       <div className="header-disscounts-content">
 
         <a href={href}>

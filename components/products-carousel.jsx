@@ -43,16 +43,16 @@ const ProductsCarousel = ({ title, products }) => {
                                         <h5>{calculatePorcent(product.price, product.discounted_price)}% OFF</h5>
                                     </div>
                                 }
-                                <img src={product.picture} class="card-img-top" alt={product.name} />
-                                <div class="card-body">
-                                    <h5 class="card-title">{product.name}</h5>
+                                <img src={product.picture} className="card-img-top" alt={product.name} />
+                                <div className="card-body">
+                                    <h5 className="card-title">{product.name}</h5>
                                     <div className='d-flex justify-content-between'>
 
                                         {product.discounted_price > 0 && <p className='primary-color'>U$D {product.discounted_price}</p>}
                                         {product.discounted_price <= 0 && <p className='text-secondary'>U$D {product.price}</p>}
 
                                         <a href={`product/${product.id}`}>
-                                            <button class="primary-button" style={{
+                                            <button className="primary-button" style={{
                                                 paddingLeft: '1em',
                                                 paddingRight: '1em',
                                                 paddingTop: '0',
