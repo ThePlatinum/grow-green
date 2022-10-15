@@ -52,7 +52,7 @@ export default function Plants() {
         <div className="row">
           {[...Array(20).keys()].map(i=>{
             return(
-              <div className='col-md-3 pb-4' >
+              <div className='col-md-3 pb-4' key={i}>
                 <PlantCard plant={plant} />
               </div>
             )
