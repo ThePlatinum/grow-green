@@ -19,7 +19,7 @@ export default function Header() {
             <a class="btn btn-outline-light position-relative" href='/shop/cart'>
               <i class="bi bi-basket"></i>
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                0
+                3
               </span>
             </a>
           </div>
