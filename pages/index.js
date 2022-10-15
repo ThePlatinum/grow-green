@@ -7,7 +7,7 @@ import AppLayout from '../components/layouts/AppLayout'
 import PlantList from '../components/plant-list'
 import ProductsCarousel from '../components/products-carousel';
 import { Plants } from '../services/plants.service';
-import { Shop } from '../services/shop.service';
+import { ShopService } from '../services/shop.service';
 
 export default function Home() {
 
@@ -29,7 +29,7 @@ export default function Home() {
 
     if (!plants) {
       let local_plants = new Plants();
-      let local_shop = new Shop();
+      let local_shop = new ShopService();
       loadPlants(local_plants);
       loadShop(local_shop)
     }
@@ -42,7 +42,7 @@ export default function Home() {
     <div>
       <div>
       <div className={container}>Home Page Here is a container from module style</div>
-      <Container >Here is a container from reactstrap</Container>
+      <Container>Here is a container from reactstrap</Container>
       <Shop/>
     </div>
    
