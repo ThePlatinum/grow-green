@@ -12,6 +12,7 @@ export default function Header() {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="d-flex gap-5 align-items-center">
+            <a className='navbar-item text-light' href="/">Home</a>
             <a className='navbar-item text-light' href="/plant">Discover Plants</a>
             <a className='navbar-item text-light' href="/shop">Shop Resources</a>
             <a class="btn btn-outline-light position-relative" href='/shop/cart'>
