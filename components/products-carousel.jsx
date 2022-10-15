@@ -1,5 +1,6 @@
 import { Pagination, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { breakpoints_four } from '../utils/consts';
 
 const ProductsCarousel = ({ title, products }) => {
 
@@ -27,22 +28,7 @@ const ProductsCarousel = ({ title, products }) => {
                 pagination={{
                     clickable: true
                 }}
-                breakpoints={{
-                    // when window width is >= 640px
-                    191: {
-                        width: 191,
-                        slidesPerView: 1,
-                    },
-                    648: {
-                        width: 648,
-                        slidesPerView: 3,
-                    },
-                    // when window width is >= 768px
-                    1296: {
-                        width: 1296,
-                        slidesPerView: 6,
-                    },
-                }}
+                breakpoints={breakpoints_four}
                 scrollbar={{ draggable: true }}
                 modules={[Pagination, Scrollbar]}
                 className="mySwiper"

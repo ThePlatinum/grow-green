@@ -1,9 +1,3 @@
-const consts = {
-  BACKEND_URL: `http://localhost:8000/api/`, // `https://ise.mantenar.com/api/`
-  IMAGE__URL: `http://localhost:8000`, // `https://ise.mantenar.com`
-}
-
-
 export const breakpoints_four = {
   0: {
     slidesPerView: 1,
@@ -41,5 +35,3 @@ export const breakpoints_three = {
     spaceBetween: 30,
   }
 };
-
-export default consts;
