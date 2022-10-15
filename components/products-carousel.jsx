@@ -11,6 +11,15 @@ const ProductsCarousel = ({ title, products }) => {
         <div className='container'>
             <h1 className='text-center mt-5'>{title}</h1>
 
+            {
+                !products && <div className='d-flex justify-content-center mb-5'>
+                    <div className="spinner-grow spinner mt-2" role="status"></div>
+                    <div className="spinner-grow spinner mt-2" role="status"></div>
+                    <div className="spinner-grow spinner mt-2" role="status"></div>
+
+                </div>
+            }
+
 
             <Swiper
                 slidesPerView={6}
