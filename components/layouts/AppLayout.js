@@ -9,6 +9,9 @@ const AppLayout = ({ children, title }) => {
       <Header />
       {children}
       <Footer />
+      <btn id="back-to-top" class="btn btn-light btn-lg back-to-top" role="button">
+        <i class="bi bi-arrow-up"></i>
+      </btn>
     </div>
   )
 }

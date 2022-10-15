@@ -466,3 +466,13 @@ section {
 .navbar-item:hover:after {
   transform: scaleX(1);
 }
+
+/* Scroll UP */
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  color: var(--dark-green) !important;
+  border: var(--dark-green) 2px solid;
+}
