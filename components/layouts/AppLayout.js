@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Footer from "../footer";
-import Header from "../header";
+import Footer from "../footer.jsx";
+import Header from "../header.jsx";
 
 const AppLayout = ({ children, title }) => {
   return (
