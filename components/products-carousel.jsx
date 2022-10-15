@@ -1,4 +1,4 @@
-import { Pagination } from 'swiper';
+import { Pagination, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const ProductsCarousel = ({ title, products }) => {
@@ -8,8 +8,8 @@ const ProductsCarousel = ({ title, products }) => {
     }
 
     return (
-        <div className='container'>
-            <h1 className='text-center mt-5'>{title}</h1>
+        <div className='container my-5'>
+            <h1 className='text-center'>{title}</h1>
 
             {
                 !products && <div className='d-flex justify-content-center mb-5'>
@@ -27,7 +27,24 @@ const ProductsCarousel = ({ title, products }) => {
                 pagination={{
                     clickable: true
                 }}
-                modules={[Pagination]}
+                breakpoints={{
+                    // when window width is >= 640px
+                    191: {
+                        width: 191,
+                        slidesPerView: 1,
+                    },
+                    648: {
+                        width: 648,
+                        slidesPerView: 3,
+                    },
+                    // when window width is >= 768px
+                    1296: {
+                        width: 1296,
+                        slidesPerView: 6,
+                    },
+                }}
+                scrollbar={{ draggable: true }}
+                modules={[Pagination, Scrollbar]}
                 className="mySwiper"
             >
 

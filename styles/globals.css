@@ -190,6 +190,7 @@ a:hover {
 }
 
 .swiper-slide {
+  min-width: 191px;
   font-size: 18px;
   background: #fff;
 
