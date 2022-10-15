@@ -2,16 +2,24 @@ import { useEffect, useState } from 'react';
 import HeaderDisscount from '../components/header-disscount'
 import AppLayout from '../components/layouts/AppLayout'
 import PlantList from '../components/plant-list'
+import ProductsCarousel from '../components/products-carousel';
 import { Plants } from '../services/plants.service';
+import { Shop } from '../services/shop.service';
 
 
 export default function Home() {
 
   const [plants, setPlants] = useState(null);
+  const [shop, setShop] = useState(null);
 
   useEffect(() => {
 
-    const getPlants = async (plant) => { 
+    const loadShop = async (shop_instance) => {
+      await shop_instance.getTopSellers();
+      setShop(shop_instance);
+    }
+
+    const loadPlants = async (plant) => { 
       await plant.getTopPicks();
       await plant.getTopCategories(); 
       setPlants(plant) 
@@ -19,7 +27,9 @@ export default function Home() {
 
     if (!plants) {
       let local_plants = new Plants();
-      getPlants(local_plants);
+      let local_shop = new Shop();
+      loadPlants(local_plants);
+      loadShop(local_shop)
     }
 
   }, [plants])
@@ -42,8 +52,7 @@ export default function Home() {
         background_img="//img.crocdn.co.uk/images/affiliates/image-archive/shrubs/pl0000000003_1087x380.jpg"
         href="shop/route"
       />
-      <PlantList title="Popular categories" plants={plants?.topCategories} />
-
+      <ProductsCarousel title={"This month's top sellers"} products={shop?.topSellers}></ProductsCarousel>
 
     </AppLayout>
   )
