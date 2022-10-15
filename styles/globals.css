@@ -7,6 +7,9 @@ body {
 :root {
   /* ====== Transition ====== */
   --tran-03: all 0.3s ease;
+
+  /* ====== Color ====== */
+  --dark-green: #005847; /* #1e5f29; */
 }
 
 a {
@@ -18,6 +21,10 @@ a {
   font-family: Poppins, 'Montserrat', sans-serif !important;
   scroll-behavior: smooth;
   transition: var(--tran-03);
+}
+
+.bg-green {
+  background-color: var(--dark-green);
 }
 /* 
 @media (prefers-color-scheme: dark) {
