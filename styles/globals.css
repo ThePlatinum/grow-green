@@ -394,8 +394,8 @@ section {
 
 .box {
   width: 300px;
+  min-width: 300px;
   margin: 20px;
-  border: 15px solid #fff;
   box-shadow: 0 5px 35px rgb(0, 0, 0, 0.08);
 }
 
@@ -414,19 +414,15 @@ section {
   object-fit: cover;
 }
 
-.box .text {
-  padding: 10px 0 5px;
-}
-
 .box .text h3 {
   font-weight: 400;
   color: #111;
 }
 
 .buynow {
-  color: #fff;
+  color: var(--background-color);
   padding: 10px;
-  background-color: green;
+  background-color: var(--primary-color);
   border-radius: 3px;
   float: right;
   cursor: pointer;
@@ -440,11 +436,10 @@ section {
 }
 
 .price-tag {
-  color: green;
-  background-color: #ccee;
+  color: black;
   border-radius: 3px;
   font-weight: 600;
-  padding: 10px;
+  font-size: large;
 }
 
 .navbar-item {
@@ -469,4 +464,13 @@ section {
 
 .navbar-item:hover:after {
   transform: scaleX(1);
+}
+
+.search-bar {
+  height: 3em;
+}
+
+.search-bar :is(input, button) {
+  height: 3em;
+  outline: none;
 }
