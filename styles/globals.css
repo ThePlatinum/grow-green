@@ -194,3 +194,8 @@ a:hover {
     .w-lg-50 { width: 50%!important; }
     .w-lg-75 { width: 75%!important; }
 }
+
+.spaced-between {
+  display: flex;
+  justify-content: space-between;
+}
