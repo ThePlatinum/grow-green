@@ -51,7 +51,7 @@ const ProductsCarousel = ({ title, products }) => {
                                     {product.discounted_price <= 0 && <p className='text-secondary'>U$D {product.price}</p>}
 
                                     <a href={`product/${product.id}`}>
-                                        <button class="btn btn-primary" style={{
+                                        <button class="primary-button" style={{
                                             paddingLeft: '1em',
                                             paddingRight: '1em',
                                             paddingTop: '0',

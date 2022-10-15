@@ -117,7 +117,7 @@ a:hover {
   color: black;
 }
 
-.disscount-advice-footer .primary-button {
+.primary-button {
   border: 1px solid var(--primary-color);
   background-color: var(--primary-color);
   padding-left: 1.5em;
@@ -129,7 +129,7 @@ a:hover {
   color: var(--background-color);
 }
 
-.disscount-advice-footer :is(.primary-button:hover, .active) {
+.primary-button:hover, .active {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
@@ -159,6 +159,13 @@ a:hover {
 
 .plant-item {
   width: 80%;
+  contain: content;
+}
+
+.plant-item:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.287);
+  border-radius: 8px;
 }
 
 .plant-item-name {
