@@ -36,39 +36,41 @@ const ProductsCarousel = ({ title, products }) => {
 
                 {products?.map((product, index) => (
                     <SwiperSlide key={index}>
-                        <div className="card ml-5" style={{ 'width': '20rem !important', 'position': 'relative' }}>
-                            {product.discounted_price > 0 &&
-                                <div className='disscount-tag'>
-                                    <h5>{calculatePorcent(product.price, product.discounted_price)}% OFF</h5>
+                        <a href={`product/${product.id}`}>
+                            <div className="card ml-5" style={{ 'width': '20rem !important', 'position': 'relative', "cursor": 'pointer' }}>
+                                {product.discounted_price > 0 &&
+                                    <div className='disscount-tag'>
+                                        <h5>{calculatePorcent(product.price, product.discounted_price)}% OFF</h5>
+                                    </div>
+                                }
+                                <img src={product.picture} class="card-img-top" alt={product.name} />
+                                <div class="card-body">
+                                    <h5 class="card-title">{product.name}</h5>
+                                    <div className='d-flex justify-content-between'>
+
+                                        {product.discounted_price > 0 && <p className='primary-color'>U$D {product.discounted_price}</p>}
+                                        {product.discounted_price <= 0 && <p className='text-secondary'>U$D {product.price}</p>}
+
+                                        <a href={`product/${product.id}`}>
+                                            <button class="primary-button" style={{
+                                                paddingLeft: '1em',
+                                                paddingRight: '1em',
+                                                paddingTop: '0',
+                                                paddingBottom: '0'
+
+                                            }}>Buy</button>
+                                        </a>
+                                    </div>
+
                                 </div>
-                            }
-                            <img src={product.picture} class="card-img-top" alt={product.name} />
-                            <div class="card-body">
-                                <h5 class="card-title">{product.name}</h5>
-                                <div className='d-flex justify-content-between'>
-
-                                    {product.discounted_price > 0 && <p className='primary-color'>U$D {product.discounted_price}</p>}
-                                    {product.discounted_price <= 0 && <p className='text-secondary'>U$D {product.price}</p>}
-
-                                    <a href={`product/${product.id}`}>
-                                        <button class="primary-button" style={{
-                                            paddingLeft: '1em',
-                                            paddingRight: '1em',
-                                            paddingTop: '0',
-                                            paddingBottom: '0'
-
-                                        }}>Buy</button>
-                                    </a>
-                                </div>
-
                             </div>
-                        </div>
+                        </a>
                     </SwiperSlide>
                 ))}
 
             </Swiper>
 
-        </div>
+        </div >
 
     )
 }
