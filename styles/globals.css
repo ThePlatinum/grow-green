@@ -134,7 +134,7 @@ a:hover {
   cursor: pointer;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 990px) {
   .plants-container {
     flex-wrap: wrap;
   }
