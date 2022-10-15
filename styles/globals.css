@@ -10,6 +10,7 @@ body {
 
   /* ====== Color ====== */
   --dark-green: #005847; /* #1e5f29; */
+  --light-green: #9bb6b0;
 }
 
 a {
@@ -36,3 +37,21 @@ a {
     background: black;
   }
 } */
+
+/* Swipper */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: smaller !important;
+}
+
+.card_in_slide:hover{
+  background: var(--light-green) !important;
+}

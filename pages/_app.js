@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import '../styles/globals.css'
+import '../styles/swipper.min.css'
+import '../utils/swipper'
 
 function MyApp({ Component, pageProps }) {
   return (
