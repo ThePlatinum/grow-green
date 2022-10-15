@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Header(args) {
+export default function Header() {
   return (
     <div className='bg-green '>
       <nav class="navbar navbar-expand-lg container text-white">
@@ -30,5 +30,3 @@ function Header(args) {
     </div>
   )
 }
-
-export default Header;
