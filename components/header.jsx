@@ -16,7 +16,12 @@ export default function Header() {
               <a href="/plant">Discover Plants</a>
               <a href="/shop">Shop Resources</a>
             </div>
-            <a class="btn text-white" href='/cart'> <i class="bi bi-basket"></i> </a>
+            <a class="btn btn-outline-light position-relative" href='/shop/cart'>
+              <i class="bi bi-basket"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                0
+              </span>
+            </a>
           </div>
         </div>
       </nav>
