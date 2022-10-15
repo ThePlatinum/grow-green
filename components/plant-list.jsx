@@ -5,7 +5,7 @@ const PlantList = ({ title, plants }) => (
     </h2>
 
     <div className="d-flex gap-4 container justify-content-center plants-container user-select-none mb-5">
-
+        
       {!plants && <div className="spinner-grow spinner mt-2" role="status"></div>}
       {!plants && <div className="spinner-grow spinner mt-2" role="status"></div>}
       {!plants && <div className="spinner-grow spinner mt-2" role="status"></div>}
