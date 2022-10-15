@@ -1,3 +1,6 @@
+import { Container } from 'reactstrap'
+import { container } from '../styles/Home.module.css'
+import { Shop } from './shop'
 import { useEffect, useState } from 'react';
 import HeaderDisscount from '../components/header-disscount'
 import AppLayout from '../components/layouts/AppLayout'
@@ -5,7 +8,6 @@ import PlantList from '../components/plant-list'
 import ProductsCarousel from '../components/products-carousel';
 import { Plants } from '../services/plants.service';
 import { Shop } from '../services/shop.service';
-
 
 export default function Home() {
 
@@ -36,6 +38,14 @@ export default function Home() {
 
 
   return (
+    
+    <div>
+      <div>
+      <div className={container}>Home Page Here is a container from module style</div>
+      <Container >Here is a container from reactstrap</Container>
+      <Shop/>
+    </div>
+   
     <AppLayout>
       <HeaderDisscount
         header={true}
@@ -55,5 +65,6 @@ export default function Home() {
       <ProductsCarousel title={"This month's top sellers"} products={shop?.topSellers}></ProductsCarousel>
 
     </AppLayout>
+    </div>
   )
 }
