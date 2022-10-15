@@ -42,7 +42,7 @@ export default function Home() {
         title={'UP TO 40% OFF\nAutumn plant sale'}
         description={'It’s one of the best times of the year to plant, so stock up and enjoy terrific savings. Offer on selected lines only.'}
         background_img="//img.crocdn.co.uk/images/affiliates/image-archive/autumn-plant-sale/autumn-plant-sale_2000x380v2.jpg"
-        href="shop/route"
+        href="shop"
       />
       <PlantList title="Top picks this week" plants={plants?.topPick} />
       <HeaderDisscount
@@ -50,7 +50,7 @@ export default function Home() {
         title={'UP TO 40% OFF\nShrubs & ferns'}
         description={'It’s one of the best times of the year to plant, so stock up and enjoy terrific savings. Offer on selected lines only.'}
         background_img="//img.crocdn.co.uk/images/affiliates/image-archive/shrubs/pl0000000003_1087x380.jpg"
-        href="shop/route"
+        href="shop"
       />
       <ProductsCarousel title={"This month's top sellers"} products={shop?.topSellers}></ProductsCarousel>
 
