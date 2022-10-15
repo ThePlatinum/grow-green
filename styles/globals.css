@@ -10,7 +10,8 @@ body {
   --tran-03: all 0.3s ease;
 
   /* ====== Color ====== */
-  --dark-green: #005847; /* #1e5f29; */
+  --dark-green: #005847;
+  /* #1e5f29; */
   --light-green: #9bb6b0;
   --background-color: hsl(24deg 19% 95%);
   --primary-color: #f05566;
@@ -168,9 +169,10 @@ section {
   font-size: smaller !important;
 }
 
-.card_in_slide:hover{
+.card_in_slide:hover {
   background: var(--light-green) !important;
 }
+
 .header-disscounts {
   display: flex;
   justify-content: center;
@@ -180,6 +182,10 @@ section {
   height: 350px;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.header-disscounts:hover button {
+  animation: breath 0.6s infinite alternate linear;
 }
 
 .disscount-advice {
@@ -198,7 +204,11 @@ a:hover {
   color: black;
 }
 
-.disscount-advice-footer .primary-button {
+.primary-color {
+  color: var(--primary-color);
+}
+
+.primary-button {
   border: 1px solid var(--primary-color);
   background-color: var(--primary-color);
   padding-left: 1.5em;
@@ -210,7 +220,8 @@ a:hover {
   color: var(--background-color);
 }
 
-.disscount-advice-footer :is(.primary-button:hover, .active) {
+.primary-button:hover,
+.active {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
@@ -225,7 +236,14 @@ a:hover {
 }
 
 .plant-item {
+  contain: content;
   width: 80%;
+}
+
+.plant-item:hover {
+  box-shadow: 15px 15px 15px 2px rgba(0, 0, 0, 0.181);
+  border-radius: 15px;
+  transform: scale(1.05);
 }
 
 .plant-item-name {
@@ -261,38 +279,135 @@ a:hover {
   }
 }
 
+@keyframes breath {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.015);
+  }
+
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.disscount-tag {
+  position: absolute;
+  background-color: var(--primary-color);
+  right: 0;
+  top: 1em;
+  color: var(--background-color);
+  font-weight: bolder;
+  padding-top: 0.5em;
+  padding-bottom: 0.2em;
+  padding-left: 0.6em;
+  padding-right: 0.5em;
+}
 
 /* CUSTOM WIDTHS */
-.w-10, .w-xs-10 { width: 10%!important; }
-.w-15, .w-xs-15 { width: 15%!important; }
-.w-25, .w-xs-25 { width: 25%!important; }
-.w-50, .w-xs-50 { width: 50%!important; }
-.w-75, .w-xs-75 { width: 75%!important; }
+.w-10,
+.w-xs-10 {
+  width: 10% !important;
+}
+
+.w-15,
+.w-xs-15 {
+  width: 15% !important;
+}
+
+.w-25,
+.w-xs-25 {
+  width: 25% !important;
+}
+
+.w-50,
+.w-xs-50 {
+  width: 50% !important;
+}
+
+.w-75,
+.w-xs-75 {
+  width: 75% !important;
+}
 
 /* BREAKPOINTS */
 
 /* SM breakpoint */
 @media (min-width: 576px) {
-    /* CUSTOM WIDTHS */
-    .w-sm-10 { width: 10%!important; }
-    .w-sm-15 { width: 15%!important; }
-    .w-sm-25 { width: 25%!important; }
-    .w-sm-50 { width: 50%!important; }
-    .w-sm-75 { width: 75%!important; }
+
+  /* CUSTOM WIDTHS */
+  .w-sm-10 {
+    width: 10% !important;
+  }
+
+  .w-sm-15 {
+    width: 15% !important;
+  }
+
+  .w-sm-25 {
+    width: 25% !important;
+  }
+
+  .w-sm-50 {
+    width: 50% !important;
+  }
+
+  .w-sm-75 {
+    width: 75% !important;
+  }
 }
 
 /* MD breakpoint*/
 @media (min-width: 768px) {
-    /* CUSTOM WIDTHS */
-    .w-md-10 { width: 10%!important; }
-    .w-md-15 { width: 15%!important; }
-    .w-md-25 { width: 25%!important; }
-    .w-md-50 { width: 50%!important; }
-    .w-md-75 { width: 75%!important; }
+
+  /* CUSTOM WIDTHS */
+  .w-md-10 {
+    width: 10% !important;
+  }
+
+  .w-md-15 {
+    width: 15% !important;
+  }
+
+  .w-md-25 {
+    width: 25% !important;
+  }
+
+  .w-md-50 {
+    width: 50% !important;
+  }
+
+  .w-md-75 {
+    width: 75% !important;
+  }
 }
 
 /* LG breakpoint */
 @media (min-width: 992px) {
+<<<<<<< HEAD
     /* CUSTOM WIDTHS */
     .w-lg-10 { width: 10%!important; }
     .w-lg-15 { width: 15%!important; }
@@ -301,3 +416,27 @@ a:hover {
     .w-lg-75 { width: 75%!important; }
 }
 
+=======
+
+  /* CUSTOM WIDTHS */
+  .w-lg-10 {
+    width: 10% !important;
+  }
+
+  .w-lg-15 {
+    width: 15% !important;
+  }
+
+  .w-lg-25 {
+    width: 25% !important;
+  }
+
+  .w-lg-50 {
+    width: 50% !important;
+  }
+
+  .w-lg-75 {
+    width: 75% !important;
+  }
+}
+>>>>>>> refs/remotes/origin/main
