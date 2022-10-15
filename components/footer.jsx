@@ -1,10 +1,22 @@
 
 export default function Footer() {
   return (
-    <div className="bg-green">
-      <div className="container text-center text-white py-5">
-        <hr />
-        <h3 className="pt-4">Grow Green</h3>
+    <div className="bg-green mt-5">
+      <div className="container d-flex flex-column align-items-center text-center text-white py-5">
+
+        <div class="w-md-50">
+          <h4>Subscribe</h4>
+          <p>Get connected to our insights</p>
+          <div class="input-group">
+               <input type="text" class="form-control" name="email" placeholder="Enter your email" />
+               <span class="input-group-btn">
+                    <button class="btn btn-outline-light px-4" type="button">Subscribe</button>
+               </span>
+            </div>
+        </div>
+
+        <hr className="w-100 my-5"/>
+        <h3 >Grow Green</h3>
       </div>
     </div>
   )

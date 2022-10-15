@@ -11,7 +11,6 @@ body {
 
   /* ====== Color ====== */
   --dark-green: #005847;
-  /* #1e5f29; */
   --light-green: #9bb6b0;
   --background-color: hsl(24deg 19% 95%);
   --primary-color: #f05566;
@@ -27,6 +26,7 @@ a {
   font-family: Poppins, 'Montserrat', sans-serif !important;
   scroll-behavior: smooth;
   transition: var(--tran-03);
+  border-radius: 0 !important;
 }
 
 .spinner {
