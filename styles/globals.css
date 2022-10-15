@@ -10,7 +10,8 @@ body {
   --tran-03: all 0.3s ease;
 
   /* ====== Color ====== */
-  --dark-green: #005847; /* #1e5f29; */
+  --dark-green: #005847;
+  /* #1e5f29; */
   --light-green: #9bb6b0;
   --background-color: hsl(24deg 19% 95%);
   --primary-color: #f05566;
@@ -87,9 +88,10 @@ a {
   align-items: center;
 }
 
-.card_in_slide:hover{
+.card_in_slide:hover {
   background: var(--light-green) !important;
 }
+
 .header-disscounts {
   display: flex;
   justify-content: center;
@@ -129,7 +131,8 @@ a:hover {
   color: var(--background-color);
 }
 
-.primary-button:hover, .active {
+.primary-button:hover,
+.active {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
@@ -214,42 +217,106 @@ a:hover {
 
 
 /* CUSTOM WIDTHS */
-.w-10, .w-xs-10 { width: 10%!important; }
-.w-15, .w-xs-15 { width: 15%!important; }
-.w-25, .w-xs-25 { width: 25%!important; }
-.w-50, .w-xs-50 { width: 50%!important; }
-.w-75, .w-xs-75 { width: 75%!important; }
+.w-10,
+.w-xs-10 {
+  width: 10% !important;
+}
+
+.w-15,
+.w-xs-15 {
+  width: 15% !important;
+}
+
+.w-25,
+.w-xs-25 {
+  width: 25% !important;
+}
+
+.w-50,
+.w-xs-50 {
+  width: 50% !important;
+}
+
+.w-75,
+.w-xs-75 {
+  width: 75% !important;
+}
 
 /* BREAKPOINTS */
 
 /* SM breakpoint */
 @media (min-width: 576px) {
-    /* CUSTOM WIDTHS */
-    .w-sm-10 { width: 10%!important; }
-    .w-sm-15 { width: 15%!important; }
-    .w-sm-25 { width: 25%!important; }
-    .w-sm-50 { width: 50%!important; }
-    .w-sm-75 { width: 75%!important; }
+
+  /* CUSTOM WIDTHS */
+  .w-sm-10 {
+    width: 10% !important;
+  }
+
+  .w-sm-15 {
+    width: 15% !important;
+  }
+
+  .w-sm-25 {
+    width: 25% !important;
+  }
+
+  .w-sm-50 {
+    width: 50% !important;
+  }
+
+  .w-sm-75 {
+    width: 75% !important;
+  }
 }
 
 /* MD breakpoint*/
 @media (min-width: 768px) {
-    /* CUSTOM WIDTHS */
-    .w-md-10 { width: 10%!important; }
-    .w-md-15 { width: 15%!important; }
-    .w-md-25 { width: 25%!important; }
-    .w-md-50 { width: 50%!important; }
-    .w-md-75 { width: 75%!important; }
+
+  /* CUSTOM WIDTHS */
+  .w-md-10 {
+    width: 10% !important;
+  }
+
+  .w-md-15 {
+    width: 15% !important;
+  }
+
+  .w-md-25 {
+    width: 25% !important;
+  }
+
+  .w-md-50 {
+    width: 50% !important;
+  }
+
+  .w-md-75 {
+    width: 75% !important;
+  }
 }
 
 /* LG breakpoint */
 @media (min-width: 992px) {
-    /* CUSTOM WIDTHS */
-    .w-lg-10 { width: 10%!important; }
-    .w-lg-15 { width: 15%!important; }
-    .w-lg-25 { width: 25%!important; }
-    .w-lg-50 { width: 50%!important; }
-    .w-lg-75 { width: 75%!important; }
+
+  /* CUSTOM WIDTHS */
+  .w-lg-10 {
+    width: 10% !important;
+  }
+
+  .w-lg-15 {
+    width: 15% !important;
+  }
+
+  .w-lg-25 {
+    width: 25% !important;
+  }
+
+  .w-lg-50 {
+    width: 50% !important;
+  }
+
+  .w-lg-75 {
+    width: 75% !important;
+  }
 }
 
 .spaced-between {
@@ -272,6 +339,7 @@ a:hover {
   flex-direction: column;
   margin-top: 60px;
 }
+
 @media screen and (max-width: 600px) {
   .title {
     width: 100%;
@@ -290,11 +358,13 @@ a:hover {
   padding: 20px;
   border-radius: 5px;
 }
+
 .titleTextOne span {
   color: green;
   font-weight: 600;
   font-size: 1.3em;
 }
+
 .titleText {
   color: #555;
   font-size: 1.1em;
@@ -306,6 +376,7 @@ a:hover {
 section {
   padding: 50px 50px 0 50px;
 }
+
 ._section .content {
   display: flex;
   justify-content: center;
@@ -314,22 +385,26 @@ section {
   margin-top: 20px;
   min-height: 70vh;
 }
+
 @media screen and (max-width: 600px) {
   section {
     padding: 100px 10px 10px 0;
   }
 }
+
 .box {
   width: 300px;
   margin: 20px;
   border: 15px solid #fff;
   box-shadow: 0 5px 35px rgb(0, 0, 0, 0.08);
 }
+
 .box .imgBx {
   position: relative;
   width: 100%;
   height: 250px;
 }
+
 .box .imgBx img {
   position: absolute;
   top: 0;
@@ -338,13 +413,16 @@ section {
   height: 100%;
   object-fit: cover;
 }
+
 .box .text {
   padding: 10px 0 5px;
 }
+
 .box .text h3 {
   font-weight: 400;
   color: #111;
 }
+
 .buynow {
   color: #fff;
   padding: 10px;
@@ -353,16 +431,42 @@ section {
   float: right;
   cursor: pointer;
 }
+
 .end-div {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-top: 5px;
 }
+
 .price-tag {
   color: green;
   background-color: #ccee;
   border-radius: 3px;
   font-weight: 600;
   padding: 10px;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-item:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: var(--background-color);
+
+  transform: scaleX(0);
+  transition: all 0.15s ease-in-out;
+
+}
+
+.navbar-item:hover:after {
+  transform: scaleX(1);
 }
