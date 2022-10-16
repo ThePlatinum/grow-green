@@ -1,8 +1,10 @@
 import Image from "next/image";
 import HeaderDisscount from "../../components/header-disscount";
 import AppLayout from "../../components/layouts/AppLayout";
+import cart from "../../services/cart.service";
 
 export default function Shop() {
+
   return (
     <AppLayout>
       <HeaderDisscount
@@ -24,19 +26,19 @@ export default function Shop() {
                 <div className="">
                   <div className="spaced-between">
                     <dt>Total Items:</dt>
-                    <dd className="text-right">2</dd>
+                    <dd className="text-right">{cart.products.length}</dd>
                   </div>
                   <div className="spaced-between">
                     <dt>Total price:</dt>
-                    <dd className="text-right">USD 568</dd>
+                    <dd className="text-right">U$D {cart.getTotal()}</dd>
                   </div>
                   <div className="spaced-between">
                     <dt>Discount:</dt>
-                    <dd className="text-right">USD 000</dd>
+                    <dd className="text-right">U$D 0.00</dd>
                   </div>
                   <div className="spaced-between">
                     <dt>Total:</dt>
-                    <dd className="text-right h5"><strong>USD 1,650</strong></dd>
+                    <dd className="text-right h5"><strong>U$D {cart.getTotalWithDisscounts(0)}</strong></dd>
                   </div>
                 </div>
               </div>
