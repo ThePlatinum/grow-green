@@ -11,7 +11,7 @@ export default function Header() {
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDrop" aria-controls="navbarDrop" aria-expanded="false" aria-label="Toggle">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="d-flex gap-5 align-items-center">
+          <div className="d-flex gap-3 gap-md-5 flex-column flex-md-row align-items-center flex-wrap">
             <a className='navbar-item text-light' href="/">Home</a>
             <a className='navbar-item text-light' href="/plant">Discover Plants</a>
             <a className='navbar-item text-light' href="/shop">Shop Resources</a>
