@@ -29,6 +29,15 @@ a {
   border-radius: 0 !important;
 }
 
+p {
+  font-weight: 200 !important;
+  /* font-family:  sans-serif !important; */
+}
+
+small{
+  font-size: x-small;
+}
+
 .spinner {
   transform: scale(0.5);
   color: var(--dark-green)
@@ -144,6 +153,17 @@ a:hover {
   color: var(--primary-color);
 }
 
+.hang-right {
+  margin-right: -4rem;
+}
+
+.boxed {
+  padding: 0.5rem 1rem;
+  border: var(--primary-color) 2px solid;
+  width: fit-content !important;
+  color: var(--primary-color);
+}
+
 .disscount-advice-header .disscount-advice-title {
   color: var(--primary-color);
   font-weight: bolder;
@@ -208,6 +228,10 @@ a:hover {
   .disscount-advice {
     min-width: 0;
     width: 100%;
+  }
+
+  .hang-right {
+    margin-right: 0rem;
   }
 }
 
