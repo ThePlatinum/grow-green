@@ -1,18 +1,17 @@
-import Image from "next/image";
+import cart from "../services/cart.service";
 
-export const ShopCard = ({ src, title, subtitle, price }) => {
+export const ShopCard = ({ product }) => {
 
   return (
     <div className="box">
       <div className="imgBx">
-        <img src={src} alt="imagecover" />
+        <img src={product?.picture} alt="imagecover" />
       </div>
       <div className="text px-3 pt-3">
-        <h5>{title}</h5>
-        <p>{subtitle}</p>
+        <h5>{product?.name}</h5>
         <div className="end-div">
-          <p className="price-tag text-secondary">U$D {price}</p>
-          <p className="buynow primary-button">Buy now</p>
+          <p className="price-tag text-secondary">U$D {product.price}</p>
+          <p className="buynow primary-button" onClick={() => cart.addProduct({...product, cant: 1})}>Add to cart</p>
         </div>
       </div>
     </div>

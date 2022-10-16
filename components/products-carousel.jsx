@@ -13,7 +13,7 @@ const ProductsCarousel = ({ title, products }) => {
             <h1 className='text-center'>{title}</h1>
 
             {
-                !products && <div className='d-flex justify-content-center mb-5'>
+                !products?.length > 0 && <div className='d-flex justify-content-center mb-5'>
                     <div className="spinner-grow spinner mt-2" role="status"></div>
                     <div className="spinner-grow spinner mt-2" role="status"></div>
                     <div className="spinner-grow spinner mt-2" role="status"></div>

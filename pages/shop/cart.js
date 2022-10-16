@@ -1,9 +1,26 @@
-import Image from "next/image";
 import HeaderDisscount from "../../components/header-disscount";
 import AppLayout from "../../components/layouts/AppLayout";
 import cart from "../../services/cart.service";
+import { useState, useEffect } from 'react';
+import CartProductItem from "../../components/cart-product";
+
 
 export default function Shop() {
+
+  const [coupon, setCoupon] = useState('')
+  const [Cart, setCart] = useState()
+
+  const applyDisscount = () => {
+    cart.applyDisscount(coupon);
+    setCoupon('');
+  }
+
+  useEffect(() => {
+    if (!Cart) {
+      cart.loadCart().then(cart_response => setCart(cart_response));
+      console.log(cart);
+    }
+  }, Cart)
 
   return (
     <AppLayout>
@@ -26,7 +43,7 @@ export default function Shop() {
                 <div className="">
                   <div className="spaced-between">
                     <dt>Total Items:</dt>
-                    <dd className="text-right">{cart.products.length}</dd>
+                    <dd className="text-right">{cart.products?.length}</dd>
                   </div>
                   <div className="spaced-between">
                     <dt>Total price:</dt>
@@ -34,29 +51,27 @@ export default function Shop() {
                   </div>
                   <div className="spaced-between">
                     <dt>Discount:</dt>
-                    <dd className="text-right">U$D 0.00</dd>
+                    <dd className="text-right">U$D {cart.getDisscount()}</dd>
                   </div>
                   <div className="spaced-between">
                     <dt>Total:</dt>
-                    <dd className="text-right h5"><strong>U$D {cart.getTotalWithDisscounts(0)}</strong></dd>
+                    <dd className="text-right h5"><strong>U$D {cart.getTotalWithDisscounts()}</strong></dd>
                   </div>
                 </div>
               </div>
 
-              <form>
-                <div className="form-group">
-                  <label>Have coupon?</label>
-                  <div className="input-group">
-                    <input type="text" className="form-control rounded-0" name="" placeholder="Coupon code" />
-                    <span className="input-group-append">
-                      <button className="btn btn-dark rounded-0">Apply</button>
-                    </span>
-                  </div>
+              <div className="form-group">
+                <label>Have coupon?</label>
+                <div className="input-group">
+                  <input onChange={(ev) => setCoupon(ev.target.value)} type="text" className="form-control rounded-0" name="" placeholder="Coupon code" />
+                  <span className="input-group-append">
+                    <button onClick={() => applyDisscount()} className="btn btn-dark rounded-0">Apply</button>
+                  </span>
                 </div>
-              </form>
+              </div>
 
               <div className="d-grid gap-2 pt-5">
-                <a href="#" className="btn btn-dark rounded-0"> Make Purchase <i className="fa fa-chevron-right"></i> </a>
+                <a href="/success" onClick={() => cart.deleteCart()} className="btn btn-dark rounded-0"> Make Purchase <i className="fa fa-chevron-right"></i> </a>
               </div>
             </div>
 
@@ -71,66 +86,12 @@ export default function Shop() {
               </div>
               < hr className="mb-0" />
 
-              <div className="row bg-light m-0 p-2 ps-0">
-                <div className="col-6">
-                  <div className="d-flex gap-3 align-items-center justify-content-center">
-                    <Image src="/images/plant2.png" width={150} height={150} />
-                    <div>
-                      <h5>Bay Leaves</h5>
-                      <small>Another name of some product goes just here</small>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  <input type='number' value='1' className="form-control" />
-                </div>
-                <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  $98.00
-                </div>
-                <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  <a href="#" className="btn btn-outline-danger" ><i className="bi bi-trash"></i></a>
-                </div>
-              </div>
-              <div className="row bg-white m-0 p-2 ps-0">
-                <div className="col-6">
-                  <div className="d-flex gap-3 align-items-center justify-content-center">
-                    <Image src="/images/plant1.png" width={150} height={150} />
-                    <div>
-                      <h5>Seedlines</h5>
-                      <small>Another name of some product goes just here</small>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  <input type='number' value='1' className="form-control" />
-                </div>
-                <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  $98.00
-                </div>
-                <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  <a href="#" className="btn btn-outline-danger" ><i className="bi bi-trash"></i></a>
-                </div>
-              </div>
-              <div className="row bg-light m-0 p-2 ps-0">
-                <div className="col-6">
-                  <div className="d-flex gap-3 align-items-center justify-content-center">
-                    <Image src="/images/plant3.png" width={150} height={150} />
-                    <div>
-                      <h5>Seedlines</h5>
-                      <small>Another name of some product goes just here</small>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  <input type='number' value='1' className="form-control" />
-                </div>
-                <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  $98.00
-                </div>
-                <div className="col-2 d-flex gap-3 align-items-center justify-content-center">
-                  <a href="#" className="btn btn-outline-danger" ><i className="bi bi-trash"></i></a>
-                </div>
-              </div>
+              {
+                cart.products.map(product => <CartProductItem cart={cart} setCart={setCart} product={product}/>)
+              }
+
+              {cart.products.length <= 0 && <h3 className="text-center mt-5">The cart is empty</h3>}
+
             </div>
           </div>
         </div>

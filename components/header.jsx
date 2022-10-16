@@ -1,3 +1,4 @@
+import cart from '../services/cart.service';
 import React from 'react';
 
 export default function Header() {
@@ -17,9 +18,6 @@ export default function Header() {
             <a className='navbar-item text-light' href="/shop">Shop Resources</a>
             <a className="btn btn-outline-light position-relative" href='/shop/cart'>
               <i className="bi bi-basket"></i>
-              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                3
-              </span>
             </a>
           </div>
         </div>
